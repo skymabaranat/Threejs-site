@@ -1,0 +1,94 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    background: rgb(24, 24, 24);
+}
+
+.webgl
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    outline: none;
+    opacity: 50%;
+}
+
+.container{
+    position: absolute;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.menu{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu li{
+    position: absolute;
+    list-style: none;
+    right: 250px;
+    transform-origin: 220px;
+    transition: 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+    transform: rotate(0deg) translate(0px);
+    opacity: 0%;
+}
+
+.menu.active li{
+    transform: rotate(calc(360deg / 3 * var(--i)));
+    opacity: 80%;
+
+}
+
+.menu li a{
+    background: black;
+    color: beige;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 50%;
+}
+
+.toggle {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    right: 20px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 3px 4px black;
+    font-size: 2em;
+    opacity: 0%;
+}
+
+
+h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+}
+
